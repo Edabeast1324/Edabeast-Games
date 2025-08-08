@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="icon" type="image/png" href="Favicons/NewYorkTrail.png">
+  <link rel="icon" type="image/png" href="NewYorkTrail.png">
   <title>New York Trail</title>
   <style>
     body {
@@ -51,7 +51,7 @@
 </head>
 <body>
   <div id="game"></div>
-  <audio id="bg-music" src="Sounds/NewYorkTrail.mp3" loop></audio>
+  <audio id="bg-music" src="NewYorkTrail.mp3" loop></audio>
   <script>
     const gameDiv = document.getElementById('game');
     const bgMusic = document.getElementById('bg-music');
@@ -230,7 +230,7 @@
     }
 
     function visitHospital() {
-      gameDiv.innerHTML = `<div class="stats">${showStats()}</div><img id="carImage" src="Images/Car1.png" alt="Car"> <img id="hospitalImage" src="Images/Hospital.png" alt="Hospital"><p>Your health is restored by 50 points (up to 100).<p>`;
+      gameDiv.innerHTML = `<div class="stats">${showStats()}</div><img id="carImage" src="Car1.png" alt="Car"> <img id="hospitalImage" src="Hospital.png" alt="Hospital"><p>Your health is restored by 50 points (up to 100).<p>`;
       state.health = Math.min(state.health + 50, 100);
       setTimeout(nextStop, 2000);
     }
@@ -238,7 +238,7 @@
     function startCarAnimation() {
       let carImage = document.getElementById("carImage");
       setInterval(() => {
-        carImage.src = carImage.src.includes("Images/Car1.png") ? "Images/Car2.png" : (carImage.src.includes("Images/Car2.png") ? "Images/Car3.png" : "Images/Car1.png");
+        carImage.src = carImage.src.includes("Car1.png") ? "Car2.png" : (carImage.src.includes("Car2.png") ? "Car3.png" : "Car1.png");
       }, 100);
     }
 
@@ -282,3 +282,4 @@
   </script> 
 </body>
 </html>
+
