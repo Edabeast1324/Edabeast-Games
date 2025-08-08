@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <title>Flappy Bird</title>
-  <link rel="icon" type="image/png" href="Favicons/Flappy.png"/>
+  <link rel="icon" type="image/png" href="Flappy.png"/>
   <style>
     html, body {
       margin: 0; padding: 0; height: 100vh;
-      background: url('Images/Sky.jpg') center/cover no-repeat;
+      background: url('Sky.jpg') center/cover no-repeat;
       overflow: hidden; font-family: sans-serif;
     }
     #game {
@@ -64,7 +64,7 @@
 <div id="game">
   <div id="viewport"></div>
   <canvas id="hitboxCanvas"></canvas>
-  <img id="bird" src="Images/Bird.png" alt="Bird" />
+  <img id="bird" src="Bird.png" alt="Bird" />
   <div id="score">Score: 0</div>
   <div id="game-over">
     Game Over<br />
@@ -113,10 +113,10 @@
   hitboxCanvas.width = window.innerWidth;
   hitboxCanvas.height = window.innerHeight;
 
-  const flapSound = new Audio('Sounds/Flap.mp3');
-  const pointSound = new Audio('Sounds/point.mp3');
-  const hitSound = new Audio('Sounds/Hit.mp3');
-  const dieSound = new Audio('Sounds/Die.mp3');
+  const flapSound = new Audio('Flap.mp3');
+  const pointSound = new Audio('point.mp3');
+  const hitSound = new Audio('Hit.mp3');
+  const dieSound = new Audio('Die.mp3');
 
   function createPipeSet(gapPosition) {
     const container = document.createElement('div');
@@ -125,10 +125,10 @@
     const topWrapper = document.createElement('div');
     topWrapper.className = 'pipe-wrapper';
     const topPipe = document.createElement('img');
-    topPipe.src = 'Images/Pipe2.png';
+    topPipe.src = 'Pipe2.png';
     topPipe.className = 'pipe';
     const topExt = document.createElement('img');
-    topExt.src = 'Images/above-extension.png';
+    topExt.src = 'above-extension.png';
     topExt.className = 'top-extension';
     topWrapper.appendChild(topPipe);
     topWrapper.appendChild(topExt);
@@ -137,10 +137,10 @@
     bottomWrapper.className = 'pipe-wrapper';
     bottomWrapper.style.marginTop = gap + 'px';
     const bottomPipe = document.createElement('img');
-    bottomPipe.src = 'Images/Pipe.png';
+    bottomPipe.src = 'Pipe.png';
     bottomPipe.className = 'pipe';
     const bottomExt = document.createElement('img');
-    bottomExt.src = 'Images/Pipe-extension.png';
+    bottomExt.src = 'Pipe-extension.png';
     bottomExt.className = 'bottom-extension';
     bottomWrapper.appendChild(bottomPipe);
     bottomWrapper.appendChild(bottomExt);
@@ -387,3 +387,4 @@
 
 </body>
 </html>
+
